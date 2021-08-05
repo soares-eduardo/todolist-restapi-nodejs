@@ -53,3 +53,11 @@ functions:
           path: todos
           method: get
           cors: true
+
+  get:
+    handler: src/handler/getTodo.getTodo
+    events:
+      - http:
+          path: todos/{id}
+          method: get
+          cors: true
