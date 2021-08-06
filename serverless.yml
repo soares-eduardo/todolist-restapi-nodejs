@@ -61,3 +61,19 @@ functions:
           path: todos/{id}
           method: get
           cors: true
+
+  update:
+    handler: src/handler/updateTodo.updateTodo
+    events:
+      - http:
+          path: todos/{id}
+          method: put
+          cors: true
+
+  delete:
+    handler: src/handler/deleteTodo.deleteTodo
+    events:
+      - http:
+          path: todos/{id}
+          method: delete
+          cors: true
